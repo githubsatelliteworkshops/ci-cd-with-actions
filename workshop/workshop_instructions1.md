@@ -84,58 +84,60 @@ At the end of this exercise we will learn -
    <details>
         <summary><b>Click here to view the full contents of the yaml file to copy:</b></summary>
    
-   ```yaml
-   
-   # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-   # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+        ```yaml
 
-   name: CI
+        # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+        # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-   on:
-    push:
-      branches: [ main, 'releases/*' ]
-    pull_request:
-      branches: [ main, 'releases/*' ]
+        name: CI
 
-   jobs:
-    build-test:
+        on:
+          push:
+            branches: [ main, 'releases/*' ]
+          pull_request:
+            branches: [ main, 'releases/*' ]
 
-    runs-on: ubuntu-latest
+        jobs:
 
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+          build-test:
+            runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
-    
-   upload-artifact:
-    needs: build-test
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: npm install and build
-      run: |
-        npm install
-        npm run build
-    - uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: build/
-   ```
+            strategy:
+              matrix:
+                node-version: [10.x, 12.x, 14.x, 15.x]
+                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+            steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                node-version: ${{ matrix.node-version }}
+            - run: npm ci
+            - run: npm run build --if-present
+            - run: npm test
+
+          upload-artifact:
+            needs: build-test
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v2
+            - name: npm install and build
+              run: |
+                npm install
+                npm run build
+            - uses: actions/upload-artifact@v2
+              with:
+                name: release-artifact
+                path: build/
+        ```
    </details>
    - :warning: `yaml` syntax relies on indentation, please make sure that this is not changed
-
-10. Ensure that uploading of package happens only after the build and test step has succeeded for all node versions we are testing for
-
+   
+   Commit this file and look at the Actions tab to see the workflow running.
+   After the workflow completes, you will be seeing that an artifact `release-artifact` has been published 
+   <Add screenshot here>
+   
 11. Add status badge
 
 - **Knowledge Check**
