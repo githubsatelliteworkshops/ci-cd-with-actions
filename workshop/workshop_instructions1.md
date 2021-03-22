@@ -84,7 +84,7 @@ At the end of this exercise we will learn -
    <details>
         <summary><b>Click here to view the full contents of the yaml file to copy:</b></summary>
    
-        ```yaml
+    ```yaml
 
         # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
         # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
