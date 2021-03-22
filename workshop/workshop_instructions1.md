@@ -18,7 +18,7 @@ At the end of this exercise we will learn -
 
 # Workflow 1: Steps to set up CI workflow
 
-## Fork this repository
+## Fork actions-workshop repository
 
 1. Log into your GitHub account and fork [actions-workshop repo](https://github.com/kaverma/actions-workshop). 
 
@@ -31,17 +31,24 @@ At the end of this exercise we will learn -
 
 ## Add a CI Workflow
 
-1. In the forked repository, go to Actions tab and press "New workflow" to create a workflow for CI.
+1. In the forked `<username>/actions-workshop` repository, go to **Actions** tab and you will see a page to "Get started with GitHub Actions". You will find suggested starter workflows for this repository here.
 
-3. In the suggested starter workflows, choose "Node.js" -> "Set up this workflow.
+2. Choose **Node.js** -> "Set up this workflow"
+<img width="434" alt="image" src="https://user-images.githubusercontent.com/25735209/111957403-f9685000-8b11-11eb-98a3-b3782e813550.png">
 
-4. Name the file as "ci.yml". The file that you are creating on default branch is - 
+3. You can choose to name the file as "ci.yml". The file that you are creating on `main` branch is - 
     - `.github/workflows/ci.yml`
       - This will be the workflow file taking care of building and testing your source code
      
-4. Commit this file
+4. Use `Start Commit` option to commit this file as such directly to the `main` branch.
 
-6. :tada: Go to Actions tab to see the first workflow running
+5. :tada: Go to Actions tab to see the first workflow running
+    - Under `All workflows`, you will find your new workflow `Node.js CI.
+    - Select the workflow to see the list of runs. 
+    - Open the top most run that got triggered and you can click on the `Matrix: build` to see the jobs running or completed.
+     <img width="657" alt="image" src="https://user-images.githubusercontent.com/25735209/111958650-7fd16180-8b13-11eb-9945-28299a580742.png">
+    <img width="358" alt="image" src="https://user-images.githubusercontent.com/25735209/111958686-8a8bf680-8b13-11eb-8a93-f77d87558af8.png">
+
 
 6. Change the trigger of the workflow to - 
 
