@@ -39,6 +39,14 @@ At the end of this exercise we will learn -
 3. You can choose to name the file as "ci.yml". The file that you are creating on `main` branch is - 
     - `.github/workflows/ci.yml`
       - This will be the workflow file taking care of building and testing your source code
+    - Observe the components of the workflow file
+        - `name:` Name of the workflow
+        - `on:` Trigger for the workflow
+        - `jobs` Only one job is there -> `build`
+        `build` job has 
+        - `runs-on` 
+        - `strategy matrix`
+        - `steps` to checkout the repo, setup Node, install denedencies, build and test.
      
 4. Use `Start Commit` option to commit this file as such directly to the `main` branch.
 
@@ -46,9 +54,11 @@ At the end of this exercise we will learn -
     - Under `All workflows`, you will find your new workflow `Node.js CI.
     - Select the workflow to see the list of runs. 
     - Open the top most run that got triggered and you can click on the `Matrix: build` to see the jobs running or completed.
-     <img width="657" alt="image" src="https://user-images.githubusercontent.com/25735209/111958650-7fd16180-8b13-11eb-9945-28299a580742.png">
     <img width="358" alt="image" src="https://user-images.githubusercontent.com/25735209/111958686-8a8bf680-8b13-11eb-8a93-f77d87558af8.png">
 
+6. Make changes to the workflow file to change the name of the workflow and change the trigger for the workflow
+   Goto yml file we created `.github/workflows/ci.yml` in `Code` tab and edit.
+   - Change the name to "CI"
 
 6. Change the trigger of the workflow to - 
 
