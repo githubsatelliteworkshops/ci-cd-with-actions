@@ -134,11 +134,18 @@ At the end of this exercise we will learn -
    </details>
    - :warning: `yaml` syntax relies on indentation, please make sure that this is not changed
    
-   Commit this file and look at the Actions tab to see the workflow running.
+   - Commit this file and look at the Actions tab to see the workflow running.
    After the workflow completes, you will be seeing that an artifact `release-artifact` has been published 
-   <Add screenshot here>
+   <img width="1142" alt="image" src="https://user-images.githubusercontent.com/25735209/111973319-61c02d00-8b24-11eb-8fc9-31551537b2eb.png">
+
    
-11. Add status badge
+11. Add a status badge to ReadMe
+    - In the `Actions` tab, click on the `CI` workflow and you will find a `Create status badge` option. 
+    - Click that and `Copy the status badge markdown`
+    - Edit the ReadMe file and paste this markdown on the top of the file. 
+    - Commit the readMe file and :tada: observe the CI status badge on teh repo home page
+    <img width="557" alt="image" src="https://user-images.githubusercontent.com/25735209/111973896-f7f45300-8b24-11eb-9b06-d955904b63ba.png">
+
 
 - **Knowledge Check**
 
