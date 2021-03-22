@@ -55,7 +55,7 @@ build-and-deploy-int:
   <img width="690" alt="image" src="https://user-images.githubusercontent.com/25735209/111984902-f8471b00-8b31-11eb-9a17-93912e303c54.png">
 
   
-## Download the deployable artifact from GitHub Packages and deploy to staging environment
+## Download artifact from GitHub Packages and deploy to staging 
 
 For staging environment, we will create a new public repository and publish a branch from this to GitHub Pages to simulate a separate stage environment.
 
@@ -93,9 +93,61 @@ For staging environment, we will create a new public repository and publish a br
  
  4. Add a job to deploy to the staging environment
    - Go to Code and open `.github/workflows/ci.yml` and edit it
-   - Add a job to deploy to staging like we did for int but this time we want to download the deployable artifact from 
+   - Add a job to deploy to staging `deploy-staging` 
+   - Use the `staging` environment for this job
+   - In the steps 
+      - Checkout the repo
+      - Download the artifact we uploaded to GitHub Packges in CI workflow
+      - Deploy to GitHub Pages for the 
+        - `actions-demo-staging` repository
+        - `build` folder
+        - `gh-pages` branch
+        -  Provide `token` from `Environment secrets`
+   
+   - Add the following job snippet to the workflow file -
+  💡Replace <username> with your username 
+   
+  ```yaml
+  deploy-staging:
+    name: Deploy to Staging
+    needs: [upload-artifact, build-and-deploy-int]
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        
+      - uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
+          path: build/
+ 
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: build # The folder the action should deploy.
+          token: ${{ secrets.TOKEN }}
+          repository-name: <username>/actions-demo-staging
+   ```
+   
+   <Following is the complete workflow file content till now>
+   5. After you commit the above workflow to `main` check the GitHub pages setting in the `actions-demo-staging` repository and open the site - <> to see your app deployed
     
-  
+## See your Workflow in Action!! :tada:
+
+1. Commit a change to `src\App.js`
+2. Go to Actions and open the CI-CD workflow
+3. Open the latest run to see the details
+4. Once the workflow succeeds, go to the GitHub Pages site to see your changes- <>
+
+<Following is the complete workflow file content>
+   
+## Additional Exercise - Deploy to Prod
+
+Repeat the 'Deploy to staging' to deoply to production
+1. Create a new environment for `prod`
+2. Use a new public repo, simulating as prod environment
    
    
 ## Delete the PAT after the exercise
