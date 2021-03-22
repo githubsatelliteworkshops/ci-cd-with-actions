@@ -20,12 +20,14 @@ At the end of this exercise we will learn -
 
 ## Fork this repository
 
-1. Log into your GitHub account and fork this repository <repoUrl>
+1. Log into your GitHub account and fork [actions-workshop repo](https://github.com/kaverma/actions-workshop). 
 
-    - Open this repository Url in a browser
-    - Log into your GitHub account
-    - Fork
-      - This repo contains a starter project for react.js. In our workshop we will automate CI/CD for this starter website.
+    - Open the [actions-workshop repo](https://github.com/kaverma/actions-workshop) in a browser
+    - Sign in to your GitHub account from top right if not signed-in already.
+    - Fork this repository into your user account (using `Fork` option on top right of the screen). This repository will get forked as `<username>/actions-workshop`
+    
+    This repo contains a starter project for react.js for which we will be automating CI and CD flow. It also contains the intsructions for the workshop.
+  
 
 ## Add a CI Workflow
 
@@ -36,7 +38,6 @@ At the end of this exercise we will learn -
 4. Name the file as "ci.yml". The file that you are creating on default branch is - 
     - `.github/workflows/ci.yml`
       - This will be the workflow file taking care of building and testing your source code
-      - The file content will be empty for now
      
 4. Commit this file
 
