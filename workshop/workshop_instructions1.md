@@ -69,9 +69,9 @@ At the end of this exercise we will learn -
         ```yaml
         on:
   push:
-    branches: [ main, 'releases/**' ]
+    branches: [ main, 'releases/*' ]
   pull_request:
-    branches: [ main, 'releases/**' ]
+    branches: [ main, 'releases/*' ]
         ```
    </details>
 
