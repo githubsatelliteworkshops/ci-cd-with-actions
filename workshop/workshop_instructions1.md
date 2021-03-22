@@ -57,7 +57,7 @@ At the end of this exercise we will learn -
     <img width="358" alt="image" src="https://user-images.githubusercontent.com/25735209/111958686-8a8bf680-8b13-11eb-8a93-f77d87558af8.png">
 
 6. Make changes to the workflow file to change the name of the workflow and change the trigger for the workflow
-   Goto yml file we created `.github/workflows/ci.yml` in `Code` tab and edit.
+   Go to `.github/workflows/ci.yml` and enter edit mode by clicking the pencil :pencil: icon
    - Change the name to "CI"
    - Add another trigger for the workflow. The workflow should trigger for push and pull_request against branches starting with `releases\`
            
@@ -76,11 +76,63 @@ At the end of this exercise we will learn -
    </details>
    - :warning: `yaml` syntax relies on indentation, please make sure that this is not changed
 
-6. Change the trigger of the workflow to - 
+7. Upload the build artifact to GitHub packages so this can be consumed or deployed. 
+   - Add another job in the workflow to upload build directory to GitHub Packages.
+     - Edit `.github/workflows/ci.yml` workflow file and add a  job `upload-artifact` to run on `ubuntu-latest`
+   - When you are editing the `.github/workflows/ci.yml` workflow file, on right hand side you have Marketplace where you can search for available Actions and look a the documentation inline to see how to use that Action in your workflow. We will be using `upload-artifact` Action in this workflow
+   - We need to make sure this job runs only after the previous build-and-test job has completed successfully, for this we will use `needs` in this job.
+   <details>
+        <summary><b>Click here to view the full contents of the yaml file to copy:</b></summary>
+   
+   ```yaml
+   
+   # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+   # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-7. Change matrix strategy to -
+   name: CI
 
-9. Upload the build directory to GitHub packages so this can be consumed or deployed. 
+   on:
+    push:
+      branches: [ main, 'releases/*' ]
+    pull_request:
+      branches: [ main, 'releases/*' ]
+
+   jobs:
+    build-test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
+    
+   upload-artifact:
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: npm install and build
+      run: |
+        npm install
+        npm run build
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: build/
+   ```
+   </details>
+   - :warning: `yaml` syntax relies on indentation, please make sure that this is not changed
 
 10. Ensure that uploading of package happens only after the build and test step has succeeded for all node versions we are testing for
 
