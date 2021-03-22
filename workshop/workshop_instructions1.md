@@ -73,7 +73,7 @@ At the end of this exercise we will learn -
   pull_request:
     branches: [ main, 'releases/**' ]
         ```
-        </details>
+   </details>
 
 6. Change the trigger of the workflow to - 
 
