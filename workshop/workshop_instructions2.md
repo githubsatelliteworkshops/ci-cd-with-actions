@@ -2,7 +2,7 @@
 
 In this workflow we will be focusing on creating a CD workflow. At the end of the exercise we will learn - 
 
-1. Downloading from GitHub Packages
+1. Downloading artifacts from GitHub Packages
 2. Using deploy Action from Marketplace
 3. Environments secrets and approvals
 4. Using environments in the workflow
@@ -55,5 +55,49 @@ build-and-deploy-int:
   <img width="690" alt="image" src="https://user-images.githubusercontent.com/25735209/111984902-f8471b00-8b31-11eb-9a17-93912e303c54.png">
 
   
+## Download the deployable artifact from GitHub Packages and deploy to staging environment
 
+For staging environment, we will create a new public repository and publish a branch from this to GitHub Pages to simulate a separate stage environment.
+
+1. Create a new public repository `actions-demo-staging` in your user account
+   - Click on your profile icon on top right corner and open `Your repositories`
+   - Press `New` to create a new repository
+   - Provide the repo name as `actions-demo-staging`
+   - Ensure to choose `Public`
+   - Leave rest options as default and click `Create repository`
+
+2. Create a PAT for access to this repository 
+   - Again go click your profile icon on top right
+   - Go to `Settings`
+   - Now click on `Developer Settings` from the options listed on the left side
+   - Inside Developer Settings, click on `Personal access tokens`
+   - Press `Generate new token`
+   - Check mark only `public_repo` scope.
+   - Add a note in the text box provided and click `Generate token`
+   <img width="655" alt="image" src="https://user-images.githubusercontent.com/25735209/111993769-02bae200-8b3d-11eb-83e8-84402b0f8102.png">
+   
+   Keep this tab open or copy the generated token to a safe place. we will be using this token to add a secret in the next step
+   
+ 3. Create staging environment in `actions-workshop` repository
+   - Go back to 'Your repositories' from your profile icon and open the `actions-workshop` repository
+   - Open `Settings` tab -> open `Environments`
+   - Click on `New environment`
+   - Give Name as `staging` and press `Configure environment`
+   - Checkmark `Required reviewers` and add your username. Click `Save protection rules`
+   - Under `Environment secrets`, click `Add secret`
+   - Name your secret `TOKEN`
+   - Add the PAT token generated in previous step in the the secret value and click on 'Add secret'
+   
+   This is how the environment setting should look - 
+   <img width="1004" alt="image" src="https://user-images.githubusercontent.com/25735209/111995209-ad7fd000-8b3e-11eb-9eed-0d1b3d8f76b9.png">
+ 
+ 4. Add a job to deploy to the staging environment
+   - Go to Code and open `.github/workflows/ci.yml` and edit it
+   - Add a job to deploy to staging like we did for int but this time we want to download the deployable artifact from 
+    
+  
+   
+   
+## Delete the PAT after the exercise
+ 
 
