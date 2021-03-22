@@ -74,6 +74,7 @@ At the end of this exercise we will learn -
             branches: [ main, 'releases/*' ]
         ```
    </details>
+   - :warning: `yaml` syntax relies on indentation, please make sure that this is not changed
 
 6. Change the trigger of the workflow to - 
 
