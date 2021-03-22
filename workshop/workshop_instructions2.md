@@ -41,10 +41,10 @@ build-and-deploy-int:
 
 ```
 
-4. Enable `GitHub Pages` settings
-  - Go to `Settings` in your repository and click on `Pages`
-  - Please ensure that you have chosen `gh-pages` branch and `/(root)` folder. Press save. The settings should like below - 
-  <img width="952" alt="image" src="https://user-images.githubusercontent.com/25735209/111984704-b9b16080-8b31-11eb-8f1a-0ab1a813b126.png">
+3. Enable `GitHub Pages` settings
+   - Go to `Settings` in your repository and click on `Pages`
+   - Please ensure that you have chosen `gh-pages` branch and `/(root)` folder. Press save. The settings should like below - 
+   <img width="952" alt="image" src="https://user-images.githubusercontent.com/25735209/111984704-b9b16080-8b31-11eb-8f1a-0ab1a813b126.png">
 
 
   You will find the url where the app will get deployed. It will be - https://<username>.github.io/actions-workshop/
@@ -75,8 +75,8 @@ For staging environment, we will create a new public repository and publish a br
    <img width="655" alt="image" src="https://user-images.githubusercontent.com/25735209/111993769-02bae200-8b3d-11eb-83e8-84402b0f8102.png">
    
    Keep this tab open or copy the generated token to a safe place. we will be using this token to add a secret in the next step
-   
- 3. Create staging environment in `actions-workshop` repository
+
+3. Create staging environment in `actions-workshop` repository
    - Go back to 'Your repositories' from your profile icon and open the `actions-workshop` repository
    - Open `Settings` tab -> open `Environments`
    - Click on `New environment`
@@ -89,7 +89,7 @@ For staging environment, we will create a new public repository and publish a br
    This is how the environment setting should look - 
    <img width="1004" alt="image" src="https://user-images.githubusercontent.com/25735209/111995209-ad7fd000-8b3e-11eb-9eed-0d1b3d8f76b9.png">
  
- 4. Add a job to deploy to the staging environment
+4. Add a job to deploy to the staging environment
    - Go to Code and open `.github/workflows/ci.yml` and edit it
    - Add a job to deploy to staging `deploy-staging` 
    - Use the `staging` environment for this job
@@ -130,6 +130,7 @@ For staging environment, we will create a new public repository and publish a br
    ```
    
    <Following is the complete workflow file content till now>
+   
    5. After you commit the above workflow to `main` check the GitHub pages setting in the `actions-demo-staging` repository and open the site - <> to see your app deployed
     
 ## See your Workflow in Action!! :tada:
