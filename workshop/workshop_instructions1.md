@@ -59,6 +59,21 @@ At the end of this exercise we will learn -
 6. Make changes to the workflow file to change the name of the workflow and change the trigger for the workflow
    Goto yml file we created `.github/workflows/ci.yml` in `Code` tab and edit.
    - Change the name to "CI"
+   - Add another trigger for the workflow. The workflow should trigger for push and pull_request against branches starting with `releases\`
+           
+   Please refer to [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#on)
+   
+   <details>
+        <summary><b>Click here to view the `on` trigger contents to copy:</b></summary>
+
+        ```yaml
+        on:
+  push:
+    branches: [ main, 'releases/**' ]
+  pull_request:
+    branches: [ main, 'releases/**' ]
+        ```
+        </details>
 
 6. Change the trigger of the workflow to - 
 
