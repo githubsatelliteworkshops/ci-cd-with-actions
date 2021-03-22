@@ -158,19 +158,18 @@ Upload the build artifact that has been generated in this CI to GitHub packages 
    After the workflow completes, you will be seeing that an artifact `release-artifact` has been published 
    <img width="1142" alt="image" src="https://user-images.githubusercontent.com/25735209/111973319-61c02d00-8b24-11eb-8fc9-31551537b2eb.png">
 
-   
-## Add a status badge to ReadMe
-1. In the `Actions` tab, click on the `CI` workflow and you will find a `Create status badge` option. 
-2. Click that and `Copy the status badge markdown`
-3. Edit the ReadMe file and paste this markdown on the top of the file. 
-4. Commit the readMe file and :tada: observe the CI status badge on teh repo home page
-<img width="499" alt="image" src="https://user-images.githubusercontent.com/25735209/111973992-11959a80-8b25-11eb-92e2-fd6cb4298bb3.png">
-
 ## Test the CI Workflow
 
 1. Commit changes to `src\App.js` to the `main` branch
 2. Validate that CI workflow has triggered for this change
 3. Validate the successful completion of the CI workflow 
 4. You can click on the `release-artifact` to download and see the contents are ready to be deployed.
+
+## Additional Exercise - Add a status badge to ReadMe
+1. In the `Actions` tab, click on the `CI` workflow and you will find a `Create status badge` option. 
+2. Click that and `Copy the status badge markdown`
+3. Edit the ReadMe file and paste this markdown on the top of the file. 
+4. Commit the readMe file and :tada: observe the CI status badge on teh repo home page
+<img width="499" alt="image" src="https://user-images.githubusercontent.com/25735209/111973992-11959a80-8b25-11eb-92e2-fd6cb4298bb3.png">
 
 ## [Click here to get started with Workflow 2](./workshop_instructions2.md)
