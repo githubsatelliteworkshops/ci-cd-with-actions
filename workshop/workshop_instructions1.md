@@ -144,21 +144,13 @@ At the end of this exercise we will learn -
     - Click that and `Copy the status badge markdown`
     - Edit the ReadMe file and paste this markdown on the top of the file. 
     - Commit the readMe file and :tada: observe the CI status badge on teh repo home page
-    <img width="557" alt="image" src="https://user-images.githubusercontent.com/25735209/111973896-f7f45300-8b24-11eb-9b06-d955904b63ba.png">
-
-
-- **Knowledge Check**
-
-  - How many jobs are there in the workflow?
-    <details><summary><b>Answer</b></summary>
-   
-    </details>
-
-
-:tada: Awesome, now our CI workflow should be complete!
+    <img width="499" alt="image" src="https://user-images.githubusercontent.com/25735209/111973992-11959a80-8b25-11eb-92e2-fd6cb4298bb3.png">
 
 ## Test the CI Workflow
 
-1. Make changes
+1. Commit changes to `src\App.js` to the `main` branch
+2. Validate that CI workflow has triggered for this change
+3. Validate the successful completion of the CI workflow 
+4. You can click on the `release-artifact` to download and see the contents are ready to be deployed.
 
 ## [Click here to get started with Workflow 2](./workshop_instructions2.md)
