@@ -13,9 +13,7 @@ For int environment, we will be building the source and deploying to GitHub Page
 
 1. We can enhance the same workflow file by renaming it to `ci-cd.yml`.
 
-2. Add a new job `build-and-deploy-int`to run on `ubuntu-latest`
-
-3. Add the following steps - 
+2. Add a new job `build-and-deploy-int`to run on `ubuntu-latest` and add the following steps - 
    - Checkout the repository
    - Install and Build for node
    - Deploy to GitHub Pages by searching for an Action from Marketplace. 
@@ -104,7 +102,7 @@ For staging environment, we will create a new public repository and publish a br
         - `gh-pages` branch
         -  Provide `token` from `Environment secrets`
    
-   - Add the following job snippet to the workflow file -
+   Add the following job snippet to the workflow file -
   💡Replace <username> with your username 
    
   ```yaml
