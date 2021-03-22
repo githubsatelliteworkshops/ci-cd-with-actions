@@ -130,7 +130,7 @@ At the end of this exercise we will learn -
               with:
                 name: release-artifact
                 path: build/
-        ```
+     ```
    </details>
    - :warning: `yaml` syntax relies on indentation, please make sure that this is not changed
    
