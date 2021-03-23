@@ -165,5 +165,5 @@ The complete workflow run should like -
 - Click on your profile icon -> `Settings` -> `Developer Settings` -> `Personal access tokens`
 - Delete the Public_repo token created for this workflow.
  
-## [Click here to get started with Workflow 2](./workshop_instructions2.md)
+## [Click here for further reference](./further_reference.md)
 
