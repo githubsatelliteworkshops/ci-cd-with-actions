@@ -2,7 +2,7 @@
 
 <Add a diagram to show workflow 1 and workflow 2>
 
-**Workflow 1** will focus on creating a CI workflow for our [app](Need link to this). 
+**Workflow 1** will focus on creating a CI workflow for our [react app](react-app.md). 
 At the end of this exercise we will learn -
 1. How to create a new CI workflow 
 2. About Workflow templates 
