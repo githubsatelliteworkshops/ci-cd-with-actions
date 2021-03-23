@@ -47,7 +47,7 @@ build-and-deploy-int:
    <img width="952" alt="image" src="https://user-images.githubusercontent.com/25735209/111984704-b9b16080-8b31-11eb-8f1a-0ab1a813b126.png">
 
 
-  You will find the url where the app will get deployed. It will be - https://<username>.github.io/actions-workshop/
+  You will find the url where the app will get deployed. It will be - https://username.github.io/actions-workshop/
   🎉 Open the url and you will find that your app has been deployed to the int environment -
   
   <img width="690" alt="image" src="https://user-images.githubusercontent.com/25735209/111984902-f8471b00-8b31-11eb-9a17-93912e303c54.png">
@@ -131,23 +131,34 @@ For staging environment, we will create a new public repository and publish a br
    
    <Following is the complete workflow file content till now>
    
-   5. After you commit the above workflow to `main` check the GitHub pages setting in the `actions-demo-staging` repository and open the site - <> to see your app deployed
+   5. After you commit the above workflow to `main` check the GitHub pages setting in the `actions-demo-staging` repository and open the site - https://username.github.io/actions-demo-staging/ to see your app deployed
     
 ## See your Workflow in Action!! :tada:
 
 1. Commit a change to `src\App.js`
 2. Go to Actions and open the CI-CD workflow
 3. Open the latest run to see the details
-4. Once the workflow succeeds, go to the GitHub Pages site to see your changes- <>
+4. Once the workflow succeeds, go to the GitHub Pages site to see your changes- https://username.github.io/actions-demo-staging/
 
 <Following is the complete workflow file content>
    
 ## Additional Exercise - Deploy to Prod
 
 Repeat the 'Deploy to staging' to deoply to production
-1. Create a new environment for `prod`
-2. Use a new public repo, simulating as prod environment
-   
+1. Create a new public repo named `actions-demo`, simulating as prod environment
+2. Create a new environment for `prod` 
+   - Add the access token required in the secrets
+   - Add a required approval
+3. Add a job `deploy-prod`, similar to `deploy-staging`
+   - Ensure that `deploy-prod` job runs after `deploy-staging` using `needs`
+4. Validate your workflow run by commiting a change in the src. 
+
+You can check your app on prod environment - https://username.github.io/actions-demo/
+
+The complete workflow run should like - 
+
+![image](https://user-images.githubusercontent.com/25735209/112098563-03e52100-8bc8-11eb-8d37-90d414e281d9.png)
+
    
 ## Cleanup - Delete the PAT after the exercise
 
