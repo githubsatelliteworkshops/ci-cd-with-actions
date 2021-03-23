@@ -90,8 +90,8 @@ For staging environment, we will create a new public repository and publish a br
    <img width="1004" alt="image" src="https://user-images.githubusercontent.com/25735209/111995209-ad7fd000-8b3e-11eb-9eed-0d1b3d8f76b9.png">
  
 4. Add a job to deploy to the staging environment
-   - Go to Code and open `.github/workflows/ci.yml` and edit it
-   - Add a job to deploy to staging `deploy-staging` 
+   Go to Code and open `.github/workflows/ci.yml` and edit it. Add a job to deploy to staging `deploy-staging` 
+   - Ensure that this job runs only after `upload-artifact` and `build-and-deploy-int` have completed using `needs`. 
    - Use the `staging` environment for this job
    - In the steps 
       - Checkout the repo
@@ -149,6 +149,10 @@ Repeat the 'Deploy to staging' to deoply to production
 2. Use a new public repo, simulating as prod environment
    
    
-## Delete the PAT after the exercise
+## Cleanup - Delete the PAT after the exercise
+
+- Click on your profile icon -> `Settings` -> `Developer Settings` -> `Personal access tokens`
+- Delete the Public_repo token created for this workflow.
+
  
 
