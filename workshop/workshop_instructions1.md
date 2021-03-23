@@ -56,23 +56,52 @@ At the end of this exercise we will learn -
     - Open the top most run that got triggered and you can click on the `Matrix: build` to see the jobs running or completed.
     <img width="358" alt="image" src="https://user-images.githubusercontent.com/25735209/111958686-8a8bf680-8b13-11eb-8a93-f77d87558af8.png">
 
-6. Make changes to the workflow file to change the name of the workflow and change the trigger for the workflow
+6. Make changes to the workflow to customize for our scenario.
+  
    Go to `.github/workflows/ci.yml` and enter edit mode by clicking the pencil :pencil: icon
-   - Change the name to "CI"
-   - Add another trigger for the workflow. The workflow should trigger for push and pull_request against branches starting with `releases\`
+   - To make the workflow name specific to our app, change it to "React App CI".
+   - For our app, we want to trigger the CI on push and pull_request events not only for main branch but also all the branches starting with `releases\`. Let's specify these in `on:`
+   - Rename the `build` job to `build-test` as it is does both build and test
            
-   Please refer to [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#on)
+   💡 When you are editing your workflow, on the right hand side you will find `Marketplace` and `Documentation` tabs. You can check the documentation tab for information on how to make these changes in the workflow 
    
    <details>
-        <summary><b>Click here to view the `on` trigger contents to copy:</b></summary>
+        <summary><b>Click here to view the contents of the yaml file to copy:</b></summary>
 
-        ```yaml
-        on:
-          push:
-            branches: [ main, 'releases/*' ]
-          pull_request:
-            branches: [ main, 'releases/*' ]
-        ```
+   ```yaml
+   name: React App CI
+
+    on:
+      push:
+        branches: 
+        - main 
+        - releases/*
+      pull_request:
+        branches: 
+        - main 
+        - releases/*
+
+    jobs:
+      build-test:
+
+        runs-on: ubuntu-latest
+
+        strategy:
+          matrix:
+            node-version: [10.x, 12.x, 14.x, 15.x]
+            # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+        steps:
+        - uses: actions/checkout@v2
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v1
+          with:
+            node-version: ${{ matrix.node-version }}
+        - run: npm ci
+        - run: npm run build --if-present
+        - run: npm test
+        
+   ```
    </details>
    - :warning: `yaml` syntax relies on indentation, please make sure that this is not changed
 
