@@ -50,7 +50,7 @@ build-and-deploy-int:
   You will find the url where the app will get deployed. It will be - https://username.github.io/actions-workshop/
   🎉 Open the url and you will find that your app has been deployed to the int environment -
   
-  <img width="690" alt="image" src="https://user-images.githubusercontent.com/25735209/111984902-f8471b00-8b31-11eb-9a17-93912e303c54.png">
+  <img width="206" alt="image" src="https://user-images.githubusercontent.com/25735209/112098841-76ee9780-8bc8-11eb-9c03-ba101e1c476c.png">
 
   
 ## Download artifact from GitHub Packages and deploy to staging 
