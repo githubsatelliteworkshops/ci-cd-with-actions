@@ -108,10 +108,12 @@ At the end of this exercise we will learn -
 ## Upload the build artifact to GitHub Packages
 Upload the build artifact that has been generated in this CI to GitHub packages so this can be consumed or deployed further.
 1. Add another job in the workflow to upload build directory to GitHub Packages.
-     - Edit `.github/workflows/ci.yml` workflow file and add a  job `upload-artifact` to run on `ubuntu-latest`
+    - Edit `.github/workflows/ci.yml` workflow file
+    - Add a job `upload-artifact` 
+    - Run on `ubuntu-latest`
      
 2. Use an Action from Marketplace to upload the build directory to GitHub Packages.
-- When you are editing the `.github/workflows/ci.yml` workflow file, on right hand side you have Marketplace where you can search for available Actions and look a the documentation inline to see how to use that Action in your workflow. We will be using `upload-artifact` Action in this workflow
+    - When you are editing the `.github/workflows/ci.yml` workflow file, on right hand side you have Marketplace where you can search for available Actions and look a the documentation inline to see how to use that Action in your workflow. We will be using `upload-artifact` Action in this workflow
 - Use the following 
 ```yaml
       upload-artifact:
