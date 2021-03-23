@@ -12,6 +12,7 @@
 - A [GitHub.com account](https://github.com/join) with a [verified e-mail address](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/verifying-your-email-address)
 - Basic understanding of `yaml` syntax
 - Basic understanding of DevOps processes
+- Create a [GitHub Personal Access Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) for your account for `public_repo` scope
 - Basic understanding of software package registries (e.g. GitHub Packages, npm, NuGet)
 - Nice to have: experience with GitHub Actions
 
