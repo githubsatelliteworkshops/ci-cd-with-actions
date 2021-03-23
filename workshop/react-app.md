@@ -10,4 +10,5 @@ Please find the details about the same in [Create a new react app](https://react
 - For our workshop to simplify the setup required for the hosting services, we will be using GitHub Pages.
 
 Following is the starter app built using this repository - 
+
 <img width="238" alt="image" src="https://user-images.githubusercontent.com/25735209/112099601-d5684580-8bc9-11eb-81bf-e884b72efa56.png">
