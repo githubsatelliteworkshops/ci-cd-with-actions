@@ -1,7 +1,8 @@
 ## React app
 
 This repository contains source for a new single page application which has been created using a React starter npx command.
-Please find the details about the same in [Create a new react app](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)
+Please refer [Create a new react app](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) on how this app was created.
+Following are some details about this repo 
 
 - This repo contains ready to use starter code in src/ and a prebuilt package.json
 - It contains only a frontend build pipeline and no databases or backend
