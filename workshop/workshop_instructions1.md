@@ -110,7 +110,9 @@ At the end of this exercise we will learn -
 3. Edit the ReadMe file and paste this markdown on the top of the file. 
 4. Commit the readMe file by choosing to create a new branch and start a pull request. Press `Propose Change` and Open a pull request against `main` as the base branch.
 5. Go to the Pull request and :tada: and wait for the CI being run as `Checks` in PR conversation tab.
+   ![image](https://user-images.githubusercontent.com/25735209/112308724-789f8480-8cc8-11eb-95f9-5214ea685d51.png)
+
 6. After all the checks have passed, merge the PR, :tada: the CI status badge will be there on the repository's home page.
-<img width="499" alt="image" src="https://user-images.githubusercontent.com/25735209/111973992-11959a80-8b25-11eb-92e2-fd6cb4298bb3.png">
+![image](https://user-images.githubusercontent.com/25735209/112307781-5d804500-8cc7-11eb-9884-584fdc745a77.png)
 
 ## [Click here to get started with Workflow 2](./workshop_instructions2.md)
