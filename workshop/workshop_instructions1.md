@@ -113,7 +113,7 @@ At the end of this exercise we will learn -
 ![image](https://user-images.githubusercontent.com/25735209/112309015-d338e080-8cc8-11eb-9fbb-0946df7efbdc.png)
 
 6. After all the checks have passed, merge the PR, :tada: the CI status badge will be there on the repository's home page.
-![image](https://user-images.githubusercontent.com/25735209/112308989-c87e4b80-8cc8-11eb-95d8-aa61f794c185.png)
+![image](https://user-images.githubusercontent.com/25735209/112309132-fbc0da80-8cc8-11eb-9461-d20709478351.png)
 
 
 ## [Click here to get started with Workflow 2](./workshop_instructions2.md)
