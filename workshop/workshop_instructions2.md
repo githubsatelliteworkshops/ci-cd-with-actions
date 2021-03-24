@@ -145,7 +145,9 @@ So, for adding an approval protection rule and to store the access token as a se
     runs-on: ubuntu-latest
     environment:
       name: Production
-      url: https://${{ env.owner }}.${{ env.domain }}/${{ env.prod-repo }}//
+      url: https://${{ env.owner }}.${{ env.domain }}/${{ env.repo }}//
+    env:
+      repo: actions-workshop-prod
     steps:
       - name: Checkout 
         uses: actions/checkout@v2.3.1
@@ -159,26 +161,22 @@ So, for adding an approval protection rule and to store the access token as a se
           branch: gh-pages
           folder: build
           token: ${{ secrets.TOKEN }}
-          repository-name: ${{ env.owner }}/${{ env.prod-repo }}
+          repository-name: ${{ env.owner }}/${{ env.repo }}
    ```
-   
+   Please commit the workflow to `main` branch.
    <Following is the complete workflow file content till now>
-   
-   5. After you commit the above workflow to `main` check the GitHub pages setting in the `actions-demo-staging` repository and open the site - https://username.github.io/actions-demo-staging/ to see your app deployed
-    
-## See your Workflow in Action!! :tada:
+ 
+ ## See your Workflow in Action!! :tada:
 
-1. Commit a change to `src\App.js`
-2. Go to Actions and open the CI-CD workflow
-3. Open the latest run to see the details
-4. Once the workflow succeeds, go to the GitHub Pages site to see your changes- https://username.github.io/actions-demo-staging/
+   5. After you commit the above workflow to `main`, go to the Actions tab to see the workflow run for `React App CD`. You will be able to view the deployment urls in the run. Click on the production url to view the app deployed to production.
+   ![image](https://user-images.githubusercontent.com/25735209/112322225-bb685900-8cd6-11eb-94d5-d9ef28db9430.png)
 
-<Following is the complete workflow file content>
+   (Please check the GitHub pages setting in the `action-workshop-production` repository if you get 404 on the production environment)    
    
 ## Cleanup - Delete the PAT after the exercise
 
 - Click on your profile icon -> `Settings` -> `Developer Settings` -> `Personal access tokens`
 - Delete the Public_repo token created for this workflow.
- 
-## [Click here for further reference](./further_reference.md)
+
+## [Click here to get started with Workflow 3](./workshop_instructions3.md)
 
