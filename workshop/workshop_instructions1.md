@@ -1,6 +1,6 @@
 # Satellite Workshop Instructions: CI/CD with GitHub Actions
 
- ![image](https://user-images.githubusercontent.com/25735209/112305126-56a40300-8cc4-11eb-95de-5493c1bd8689.png)
+![image](https://user-images.githubusercontent.com/25735209/112306850-45f48c80-8cc6-11eb-903a-f38713b0a062.png)
 
 **Workflow 1** will focus on creating a CI workflow for our [react app](react-app.md). 
 At the end of this exercise we will learn -
