@@ -19,7 +19,7 @@ For Dev-Test environment, we will be building the source and deploying to GitHub
 3. Add triggers for the workflow as `Push` on `main` and `releases/*` branches
 4. Next, we will add environment variables related to the instances where we want to deploy. These environment variables are at workflow level and can be used by all the jobs
 
-Following is the yaml for the above steps. 💡 Please replace the <username> in the snippet below. 
+Following is the yaml for the above steps. 💡 Please replace the _username_ in the snippet below. 
 ```yaml 
 # CD workflow for React app
 
