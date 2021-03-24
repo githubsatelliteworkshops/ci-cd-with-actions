@@ -74,14 +74,12 @@ jobs:
 ```
 6. Commit the above yml workflow to `main` and observe the run in Actions tab
 
-8. Enable `GitHub Pages` settings to see your app deployed on Dev-Test environment.
+7. Enable `GitHub Pages` settings to see your app deployed on Dev-Test environment.
    - Go to `Settings` in your repository and click on `Pages`
    - Please ensure that you have chosen `gh-pages` branch and `/(root)` folder. Press save. The settings should like below - 
    <img width="952" alt="image" src="https://user-images.githubusercontent.com/25735209/111984704-b9b16080-8b31-11eb-8f1a-0ab1a813b126.png">
 
-
-  You will find the url where the app will get deployed. It will be - https://username.github.io/actions-workshop/
-  🎉 Open the url and you will find that your app has been deployed to the int environment -
+On the repository's home page, on the right hand side you will find an `Environments` section listing down the environments. Click on `Dev-Test` environment and `View deployment` 🎉 You will find that your app has been deployed to the Dev-Test environment -
   
   <img width="206" alt="image" src="https://user-images.githubusercontent.com/25735209/112098841-76ee9780-8bc8-11eb-9c03-ba101e1c476c.png">
 
