@@ -35,10 +35,12 @@ env:
   owner: <username>
   domain: github.io
 ```
-5. Add a new job with id `deploy-dev-test`to run on `ubuntu-latest` and 
+5. Add a new job with id `deploy-dev-test`
+   - To run on `ubuntu-latest` 
    - Add a name for the job as "Deploy to Dev-Test environment"
-   - We want to use "Dev-Test" environment and add an environment variable `url` at the job level to define the url of the Dev-Test instance.
-   - Add the following steps
+   - We will be using an environment named `Dev-Test` for this job and we will construct the `url` for this environment. As this environment is not already defined by us in this repository, GitHub Actions will take care of creating it during the first run.
+   - We also want to define an environment variable at job level for the repository name where we will publish. As the repo name will vary for various deployment environments, so it will vary for each job.
+   - Add the following steps to this job
       - Checkout the repository
       - Install and Build for node
       - Deploy to GitHub Pages by searching for an Action from Marketplace. 
@@ -50,11 +52,13 @@ env:
 
 jobs:
   deploy-dev-test:
-    name: Deploy to Dev-Test environment
+    name: Deploy to Dev test environment
     runs-on: ubuntu-latest
     environment: 
-      name: Dev-Test
-      url: https://${{ env.owner }}.${{ env.domain }}/${{ env.dev-test-repo }}//
+      name: DevTest
+      url: https://${{ env.owner }}.${{ env.domain }}/${{ env.repo }}//
+    env:
+      repo: actions-workshop
     steps:
       - name: Checkout 
         uses: actions/checkout@v2.3.1
@@ -68,8 +72,9 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: build # The folder the action should deploy.
 ```
+6. Commit the above yml workflow to `main` and observe the run in Actions tab
 
-3. Enable `GitHub Pages` settings
+8. Enable `GitHub Pages` settings to see your app deployed on Dev-Test environment.
    - Go to `Settings` in your repository and click on `Pages`
    - Please ensure that you have chosen `gh-pages` branch and `/(root)` folder. Press save. The settings should like below - 
    <img width="952" alt="image" src="https://user-images.githubusercontent.com/25735209/111984704-b9b16080-8b31-11eb-8f1a-0ab1a813b126.png">
