@@ -1,4 +1,4 @@
-# Workflow 2: CD - Deploy to DevTest and Production environments
+# Workflow 2: CD - Deploy to Dev-Test and Production environments
 
 In this workflow we will be focusing on creating a CD workflow. 
 Typically, CD deployments are done to production computes hosted in Cloud or in your premise. For our workshop, to simplify the setup complexity, we will be using GitHub Pages hosted in two repos to illustrate the CD concepts. One of the repository will host a Dev-Test instance of the page and the other will host the Production instance of the page.
@@ -10,14 +10,14 @@ At the end of the exercise we will learn -
 3. Environment secrets and approvals
 4. Using environments in the workflow
 
-## Build and deploy to Dev-Test environment for testing
+## Build and deploy to Dev-Test environment
 
 For Dev-Test environment, we will be building the source and deploying to GitHub Pages in the same repo as our source code i.e. `username/ci-cd-with-actions` repo.
 
 1. Create a new workflow file named `cd.yml` in `.github\workflows` folder.
 2. Add the name of the workflow as "React App CD"
 3. Add triggers for the workflow as `Push` on `main` and `releases/*` branches
-4. Next, we will add environment variables related to the instances where we want to deploy. These environment variables are at workflow level and can be used by all the jobs
+4. Next, we will add environment variables at workflow level, related to settings that are common for all instances where we want to deploy, so that these can be used by all the jobs in our workflow. The environement variables we want to define at workflow level are - `owner` and `domain` to construct the urls where our app will be deployed. 
 
 Following is the yaml for the above steps. 💡 Please replace the _username_ in the snippet below. 
 ```yaml 
@@ -34,7 +34,6 @@ on:
 env:
   owner: <username>
   domain: github.io
-  dev-test-repo: ci-cd-with-actions
 ```
 5. Add a new job with id `deploy-dev-test`to run on `ubuntu-latest` and 
    - Add a name for the job as "Deploy to Dev-Test environment"
