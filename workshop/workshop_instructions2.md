@@ -73,7 +73,7 @@ jobs:
   
 ## Deploy to Production environment 
 
-For production environment, we will create a new public repository and publish a branch from this to GitHub Pages to have a separate prod url where the app will be hosted.
+After the dev-test environment has been validated and we are ready for the next stage, For production environment, we will create a new public repository and publish a branch from this to GitHub Pages to have a separate prod url where the app will be hosted.
 
 1. Create a new public repository `actions-workshop-prod` in your user account
    - Click on your profile icon on top right corner and open `Your repositories`
