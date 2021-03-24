@@ -1,4 +1,4 @@
-# Workflow 2: CD workflow - Deploy to DevTest and Production environments
+# Workflow 2: CD - Deploy to DevTest and Production environments
 
 In this workflow we will be focusing on creating a CD workflow. 
 Typically, CD deployments are done to production computes hosted in Cloud or in your premise. For our workshop, to simplify the setup complexity, we will be using GitHub Pages hosted in two repos to illustrate the CD concepts. One of the repository will host a Dev-Test instance of the page and the other will host the Production instance of the page.
