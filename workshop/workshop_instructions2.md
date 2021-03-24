@@ -12,14 +12,25 @@ At the end of the exercise we will learn -
 
 ## Build and deploy to Dev-Test environment for testing
 
-For Dev-Test environment, we will be building the source and deploying to GitHub Pages in the same repo as our source code i.e. <username>/ci-cd-with-actions repo.
+For Dev-Test environment, we will be building the source and deploying to GitHub Pages in the same repo as our source code i.e. username/ci-cd-with-actions repo.
 
 1. Create a new workflow file named `cd.yml` in `.github\workflows` folder.
 2. Add the name of the workflow as "React App CD"
 3. Add triggers for the workflow as `Push` on `main` and `releases/*` branches
-4. Next we will add environment variables at the workflow level. These environment variables can be used by all the jobs
+4. Next, we will add environment variables at the workflow level. These environment variables can be used by all the jobs
 
-```yaml
+Following is the yaml for the above steps. 💡 Please replace the <username> in the snippet below. 
+```yaml 
+# CD workflow for React app
+
+name: React App CD
+
+on:
+  push:
+    branches:
+    - main
+    - releases/*
+
 env:
   owner: <username>
   domain: github.io
