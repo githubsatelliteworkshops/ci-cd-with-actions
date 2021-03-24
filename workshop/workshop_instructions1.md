@@ -108,9 +108,9 @@ At the end of this exercise we will learn -
 1. In the `Actions` tab, click on the `CI` workflow and you will find a `Create status badge` option. 
 2. Click that and `Copy the status badge markdown`
 3. Edit the ReadMe file and paste this markdown on the top of the file. 
-4. Commit the readMe file to a new branch and create a pull request.
-5. Go to the Pull request and :tada: observe the CI being run in `Checks` in PR conversation tab.
-6. After completing the PR, the CI status badge will be there on the repository's home page.
+4. Commit the readMe file by choosing to create a new branch and start a pull request. Press `Propose Change` and Open a pull request against `main` as the base branch.
+5. Go to the Pull request and :tada: and wait for the CI being run as `Checks` in PR conversation tab.
+6. After all the checks have passed, merge the PR, :tada: the CI status badge will be there on the repository's home page.
 <img width="499" alt="image" src="https://user-images.githubusercontent.com/25735209/111973992-11959a80-8b25-11eb-92e2-fd6cb4298bb3.png">
 
 ## [Click here to get started with Workflow 2](./workshop_instructions2.md)
