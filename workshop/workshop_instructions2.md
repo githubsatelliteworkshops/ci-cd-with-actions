@@ -88,7 +88,8 @@ jobs:
   
 ## Deploy to Production environment 
 
-After the dev-test environment has been validated and we are ready for the next stage, For production environment, we will create a new public repository and publish a branch from this to GitHub Pages to have a separate prod url where the app will be hosted.
+After the dev-test environment has been validated and we are ready for the next stage.
+For production environment, we will create a new public repository for deploying to GitHub Pages, so that we have a separate production url where the app will be hosted.
 
 1. Create a new public repository `actions-workshop-prod` in your user account
    - Click on your profile icon on top right corner and open `Your repositories`
@@ -97,8 +98,19 @@ After the dev-test environment has been validated and we are ready for the next 
    - Ensure to choose `Public`
    - Leave rest options as default and click `Create repository`
 
-2. Create a PAT for access to this repository. 
-   If you have already generated a PAT for `public_repo` scope then you can use that in following steps. Else, you can use the below to generate a new toke 
+2. For production environment, we want to add protection rules by configuraing approvals. Also, as we will be publishing to a separate repository, we will need the access token to deoply to GitHub Pages for that repository. 
+So, for adding an approval protection rule and to store the access token as a secret specific to this environment, we will configure a new Environment named `Production` in `ci-cd-with-actions` repository
+   - Go to 'Your repositories' from your profile icon and open the `ci-cd-with-actions` repository
+   - Open `Settings` tab -> open `Environments`
+   - Click on `New environment`
+   - Give Name as `Production` and press `Configure environment`
+   - Checkmark `Required reviewers` and add your username. Click `Save protection rules`
+   - Under `Environment secrets`, click `Add secret`
+   - Name your secret `TOKEN`
+   - Add the PAT token generated for the scope 'public_repo' the the secret value and click on 'Add secret'. If you have not generated a PAT in the prerequisites, you can use the following steps.
+
+<details>
+        <summary><b>Click here for steps to generate PAT to access your public repositories</b></summary>
    - Again go click your profile icon on top right
    - Go to `Settings`
    - Now click on `Developer Settings` from the options listed on the left side
@@ -107,18 +119,9 @@ After the dev-test environment has been validated and we are ready for the next 
    - Check mark only `public_repo` scope.
    - Add a note in the text box provided and click `Generate token`
    <img width="655" alt="image" src="https://user-images.githubusercontent.com/25735209/111993769-02bae200-8b3d-11eb-83e8-84402b0f8102.png"> 
-   Keep this tab open or copy the generated token to a safe place. we will be using this token to add a secret in the next step
+   Keep this tab open or copy the generated token to a safe place. This needs to used in the environment secret settingccccccujdc
+</details>  
 
-3. Create Production environment in `ci-cd-with-actions` repository
-   - Go back to 'Your repositories' from your profile icon and open the `ci-cd-with-actions` repository
-   - Open `Settings` tab -> open `Environments`
-   - Click on `New environment`
-   - Give Name as `Production` and press `Configure environment`
-   - Checkmark `Required reviewers` and add your username. Click `Save protection rules`
-   - Under `Environment secrets`, click `Add secret`
-   - Name your secret `TOKEN`
-   - Add the PAT token generated in previous step in the the secret value and click on 'Add secret'
-   
    This is how the environment setting should look - 
    <img width="1004" alt="image" src="https://user-images.githubusercontent.com/25735209/111995209-ad7fd000-8b3e-11eb-9eed-0d1b3d8f76b9.png">
  
