@@ -1,5 +1,5 @@
 {
-  "name": "actions-demo",
+  "name": "ci-cd-with-actions",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
