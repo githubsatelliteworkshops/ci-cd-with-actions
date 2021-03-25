@@ -64,7 +64,7 @@ jobs:
 2. On the right hand side, you will fine `Run workflow` option. Click that and run from `main` branch.
 3. Once the run is complete and successul, go to the home page of the repository, where you will find the package that got published under `Packages`
 
-![image](https://user-images.githubusercontent.com/25735209/112413864-f904ca80-8d46-11eb-98eb-9b005876bcaf.png)
+![image](https://user-images.githubusercontent.com/25735209/112415100-39654800-8d49-11eb-96ad-aa1fdda86d1d.png)
 
 You can click the package to see the details about the package and how to consume it.
 
