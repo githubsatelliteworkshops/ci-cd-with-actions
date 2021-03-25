@@ -67,7 +67,7 @@ At the end of this exercise we will learn -
         <summary><b>Click here to view the contents of the yaml file to copy:</b></summary>
 
    ```yaml
-   name: React App CI
+    name: React App CI
 
     on:
       push:
