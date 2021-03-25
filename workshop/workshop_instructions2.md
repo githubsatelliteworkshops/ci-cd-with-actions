@@ -64,7 +64,7 @@ jobs:
       name: DevTest
       url: https://${{ env.owner }}.${{ env.domain }}/${{ env.repo }}//
     env:
-      repo: actions-workshop
+      repo: ci-cd-with-actions
     steps:
       - name: Checkout 
         uses: actions/checkout@v2.3.1
