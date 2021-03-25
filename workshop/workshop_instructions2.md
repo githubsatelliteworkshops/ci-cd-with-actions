@@ -146,7 +146,8 @@ Lets go back to our `ci-cd-with-actions` repository to make changes to the CD wo
 2. Add a job to the CD workflow for deploying to the production environment
    Go to `ci-cd-with-actions` repo -> `Code` tab and open `.github/workflows/cd.yml` and edit it. Add a job to deploy to staging `deploy-production` 
    - Ensure that this job runs only after `deploy-dev-test` have completed using `needs`. 
-   - Use the `Production` environment for this job
+   - Use the `Production` environment for this job.
+   - Create a environment variable within the job scope to point to the repo where we will host the 'production' instance of GitHub pages.
    - In the steps 
       - Checkout the repo
       - Download the artifact we uploaded to GitHub Packges in CI workflow
