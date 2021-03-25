@@ -18,7 +18,7 @@ We need to have settings in the package.json that will determine how our package
     - The name of the package should be the full name of the current repository including the owner scope(user or organization)
     - You can leave the version as "0.1.0"
     
-💡 Please replace the owner in the below json as the user or organization where this repository 
+💡 Please replace the **owner** in the below json as the user or organization where this repository. Also, ensure that the complete name is provided in lower case.
 ```json
 {
   "name": "@owner/ci-cd-with-actions",
