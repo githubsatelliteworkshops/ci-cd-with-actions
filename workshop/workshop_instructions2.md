@@ -18,7 +18,7 @@ At the end of the exercise we will learn -
 
 ## Deploy to Dev-Test environment
 
-For Dev-Test environment, we will be using our current reposiotry to deploy to GitHub Pages - `owner/ci-cd-with-actions`
+For Dev-Test environment, we will be using your fork of the `ci-cd-with-actions` repo to deploy to GitHub Pages. For example - `kaverma/ci-cd-with-actions`
 
 1. Create a new workflow file named `cd.yml` in `.github\workflows` folder. (You can also go to `Actions` tab -> `New workflow` and use `Skip this and set up a workflow yourself`, using which you will get a basic workflow template to fill in)
 2. Add the name of the workflow as "React App CD"
@@ -80,10 +80,12 @@ jobs:
 ```
 6. Commit the above yml workflow to `main` and observe the run in Actions tab
 
-7. Enable `GitHub Pages` settings to see your app deployed on Dev-Test environment.
+7. After the run has successfully completed, enable `GitHub Pages` settings to see your app deployed on Dev-Test environment.
    - Go to `Settings` in your repository and click on `Pages`
    - Please ensure that you have chosen `gh-pages` branch and `/(root)` folder. Press save. The settings should like below - 
    <img width="952" alt="image" src="https://user-images.githubusercontent.com/25735209/111984704-b9b16080-8b31-11eb-8f1a-0ab1a813b126.png">
+   
+   💡 If you don't find `gh-pages`, please check that the workflow has completed successfully and recheck here post run completion.
 
 On the repository's home page, on the right hand side you will find an `Environments` section listing down the environments. Click on `Dev-Test` environment and `View deployment` 🎉 You will find that your app has been deployed to the Dev-Test environment -
   
