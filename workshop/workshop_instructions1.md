@@ -66,7 +66,7 @@ At the end of this exercise we will learn -
    <details>
         <summary><b>Click here to view the contents of the yaml file to copy:</b></summary>
 
-   ```yaml
+    ```yaml
     name: React App CI
 
     on:
@@ -100,7 +100,7 @@ At the end of this exercise we will learn -
         - run: npm run build --if-present
         - run: npm test
         
-   ```
+    ```
    </details>
    - :warning: `yaml` syntax relies on indentation, please make sure that this is not changed
 
