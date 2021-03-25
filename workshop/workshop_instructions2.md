@@ -78,7 +78,7 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: build # The folder the action should deploy.
 ```
-6. Commit the above yml workflow to `main` and observe the run in Actions tab
+6. Commit the above yml workflow to `main` and observe the run in Actions tab. NOTE, since we configured approval for deploying to production environment, you will need to click on `Review deployments` and approve  for the workflow to run.
 
 7. After the run has successfully completed, enable `GitHub Pages` settings to see your app deployed on Dev-Test environment.
    - Go to `Settings` in your repository and click on `Pages`
