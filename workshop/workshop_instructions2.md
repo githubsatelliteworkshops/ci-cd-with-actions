@@ -83,13 +83,17 @@ jobs:
 7. After the run has successfully completed, enable `GitHub Pages` settings to see your app deployed on Dev-Test environment.
    - Go to `Settings` in your repository and click on `Pages`
    - Please ensure that you have chosen `gh-pages` branch and `/(root)` folder. Press save. The settings should like below - 
-   <img width="952" alt="image" src="https://user-images.githubusercontent.com/25735209/111984704-b9b16080-8b31-11eb-8f1a-0ab1a813b126.png">
+   ![image](https://user-images.githubusercontent.com/25735209/112477097-a05e1d80-8d98-11eb-9223-cf872c5c58f4.png)
    
    💡 If you don't find `gh-pages`, please check that the workflow has completed successfully and recheck here post run completion.
 
-On the repository's home page, on the right hand side you will find an `Environments` section listing down the environments. Click on `Dev-Test` environment and `View deployment` 🎉 You will find that your app has been deployed to the Dev-Test environment -
+On the repository's home page, on the right hand side you will find an `Environments` section listing down the environments. 
+
+![image](https://user-images.githubusercontent.com/25735209/112477423-00ed5a80-8d99-11eb-81a6-a2003201eeaf.png)
+
+Click on `Dev-Test` environment and `View deployment` 🎉 You will find that your app has been deployed to the Dev-Test environment -
   
-  <img width="206" alt="image" src="https://user-images.githubusercontent.com/25735209/112098841-76ee9780-8bc8-11eb-9c03-ba101e1c476c.png">
+<img width="206" alt="image" src="https://user-images.githubusercontent.com/25735209/112098841-76ee9780-8bc8-11eb-9c03-ba101e1c476c.png">
 
   
 ## Deploy to Production environment 
@@ -180,7 +184,7 @@ Lets go back to our `ci-cd-with-actions` repository to make changes to the CD wo
  ## See your Workflow in Action!! :tada:
 
 After you commit the above workflow to `main`, go to the Actions tab to see the workflow run for `React App CD`. You will be able to view the deployment urls in the run. Click on the production url to view the app deployed to production.
-   ![image](https://user-images.githubusercontent.com/25735209/112322225-bb685900-8cd6-11eb-94d5-d9ef28db9430.png)
+![image](https://user-images.githubusercontent.com/25735209/112477659-40b44200-8d99-11eb-9bc4-5a8f1bba65c5.png)
 
 (Please check the GitHub pages setting in the `action-workshop-production` repository if you get 404 on the production environment)    
    
