@@ -88,9 +88,11 @@ jobs:
    
 💡 If you don't find `gh-pages`, please check that the workflow has completed successfully and recheck here post run completion.
 
+### Checkout deployed Environments!
+
 On the repository's home page, on the right hand side you will find an `Environments` section listing down the environments. 
 
-<img width="350" alt="image" src="https://user-images.githubusercontent.com/25735209/112478377-f5e6fa00-8d99-11eb-84b1-73d86df361b7.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/25735209/112480031-9c7fca80-8d9b-11eb-8538-60982bdc7f61.png">
 
 Click on `Dev-Test` environment and `View deployment` 🎉 You will find that your app has been deployed to the Dev-Test environment -
   
