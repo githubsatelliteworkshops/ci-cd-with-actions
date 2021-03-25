@@ -62,7 +62,9 @@ At the end of this exercise we will learn -
    - Provide a name also for this job as "Build and Test". When you start typing "name", use Ctrl+space in the yaml editor for Intellisense. 
            
    💡 When you are editing your workflow, on the right hand side you will find `Marketplace` and `Documentation` tabs. You can check the documentation tab for information on how to make these changes in the workflow 
-   
+  
+2. Click on "Start Commit" and commit your changes to the workflow.
+ 
    <details>
         <summary><b>Click here to view the contents of the yaml file to copy:</b></summary>
 
