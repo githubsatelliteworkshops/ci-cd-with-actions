@@ -10,7 +10,7 @@ At the end of the exercise we will learn -
 3. Environment secrets and approvals
 4. Using environments in the workflow
 
-## Build and deploy to Dev-Test environment
+## Deploy to Dev-Test environment
 
 For Dev-Test environment, we will be building the source and deploying to GitHub Pages in the same repo as our source code i.e. `username/ci-cd-with-actions` repo.
 
