@@ -116,7 +116,7 @@ Create a new public repository `actions-workshop-prod` in your user/organization
 Lets go back to our `ci-cd-with-actions` repository to make changes to the CD workflow
    - Go to 'Your repositories' from your profile icon and open the `ci-cd-with-actions` repository
 
-1. For production environment, we want to add protection rules by configuraing approvals. Also, as we are publishing to a separate repository, we will need the access token to deoply to GitHub Pages for that repository. So, for adding an approval protection rule and to store the access token as a secret specific to this environment, we will configure a new Environment named `Production` in `ci-cd-with-actions` repository
+1. Production environments are genrally governed by policies. So we will mimic that in our 'production' environment by adding protection rules specifically by configuraing approvals. Given that we are hosting the 'production' instance of GitHub pages in a different repository, we will configure the access token that will be required by Actions workflow to deploy. Think of this step as configuring credentials to your production compute where you intend to deploy. For adding an approval protection rule and to store the access token as a secret specific to this environment, we will configure a new Environment named `Production` in `ci-cd-with-actions` repository
    - Open `Settings` tab -> open `Environments`
    - Click on `New environment`
    - Give Name as `Production` and press `Configure environment`
