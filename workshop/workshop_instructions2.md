@@ -187,5 +187,7 @@ After you commit the above workflow to `main`, go to the Actions tab to see the 
 - Click on your profile icon -> `Settings` -> `Developer Settings` -> `Personal access tokens`
 - Delete the Public_repo token created for this workflow.
 
+### [Click here to view the solution yml for Exercise 2](./solution/cd.yml)
+
 ## [Click here to get started with Workflow 3](./workshop_instructions3.md)
 
