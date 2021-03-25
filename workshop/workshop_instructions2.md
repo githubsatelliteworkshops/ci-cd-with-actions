@@ -78,7 +78,7 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: build # The folder the action should deploy.
 ```
-6. Commit the above yml workflow to `main` and observe the run in Actions tab. NOTE, since we configured approval for deploying to production environment, you will need to click on `Review deployments` and approve  for the workflow to run.
+6. Commit the above yml workflow to `main` and observe the run in Actions tab. 
 
 7. After the run has successfully completed, enable `GitHub Pages` settings to see your app deployed on Dev-Test environment.
    - Go to `Settings` in your repository and click on `Pages`
@@ -189,7 +189,7 @@ Lets go back to our `ci-cd-with-actions` repository to make changes to the CD wo
  
  ## See your Workflow in Action!! :tada:
 
-After you commit the above workflow to `main`, go to the Actions tab to see the workflow run for `React App CD`. You will be able to view the deployment urls in the run. Click on the production url to view the app deployed to production.
+After you commit the above workflow to `main`, go to the Actions tab to see the workflow run for `React App CD`. NOTE, since we configured approval for deploying to production environment, you will need to click on `Review deployments` and approve  for the workflow to run. Post successful deployment, you will be able to view the deployment urls in the run. Click on the production url to view the app deployed to production.
 
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/25735209/112477659-40b44200-8d99-11eb-9bc4-5a8f1bba65c5.png">
 
