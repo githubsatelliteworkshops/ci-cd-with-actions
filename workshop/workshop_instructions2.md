@@ -92,7 +92,7 @@ jobs:
 
 On the repository's home page, on the right hand side you will find an `Environments` section listing down the environments. 
 
-<img width="350" alt="image" src="https://user-images.githubusercontent.com/25735209/112480031-9c7fca80-8d9b-11eb-8538-60982bdc7f61.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/11780076/112488180-5464a600-8da3-11eb-90b3-db27d1b5fb74.png">
 
 Click on `Dev-Test` environment and `View deployment` 🎉 You will find that your app has been deployed to the Dev-Test environment -
   
