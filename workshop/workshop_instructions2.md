@@ -171,10 +171,10 @@ Lets go back to our `ci-cd-with-actions` repository to make changes to the CD wo
  
  ## See your Workflow in Action!! :tada:
 
-   5. After you commit the above workflow to `main`, go to the Actions tab to see the workflow run for `React App CD`. You will be able to view the deployment urls in the run. Click on the production url to view the app deployed to production.
+After you commit the above workflow to `main`, go to the Actions tab to see the workflow run for `React App CD`. You will be able to view the deployment urls in the run. Click on the production url to view the app deployed to production.
    ![image](https://user-images.githubusercontent.com/25735209/112322225-bb685900-8cd6-11eb-94d5-d9ef28db9430.png)
 
-   (Please check the GitHub pages setting in the `action-workshop-production` repository if you get 404 on the production environment)    
+(Please check the GitHub pages setting in the `action-workshop-production` repository if you get 404 on the production environment)    
    
 ## Cleanup - Delete the PAT after the exercise
 
