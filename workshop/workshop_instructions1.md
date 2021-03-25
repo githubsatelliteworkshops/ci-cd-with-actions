@@ -4,7 +4,7 @@
 
 :bookmark: The following instructions will take on the assumption that you will be completing the steps on the GitHub UI. Feel free to use the terminal or any other GUIs you are comfortable with.
 
-# Workflow 1: Steps to set up CI workflow
+# Workflow 1: Set up CI workflow
 
 **Workflow 1** will focus on creating a CI workflow for our [react app](react-app.md). 
 At the end of this exercise we will learn -
