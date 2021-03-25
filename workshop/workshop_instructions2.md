@@ -44,8 +44,8 @@ env:
 5. Add a new job with id `deploy-dev-test`
    - To run on `ubuntu-latest` 
    - Name the job as "Deploy to Dev-Test environment"
-   - We will be specifying an environment named `Dev-Test` for this job and we will construct a `url` for this environment. This environment will be dynamically created by the Actions workflow during the first run.
-   - We will define an environment variable at job level for the repository name where we will host the test instance of GitHub pages. Please note that we are defining it within Job scope as the dev-test repo hosting test instance is specific to this job.
+   - We will be specifying an environment named `Dev-Test` for this job and we will construct a `url` for this environment. This environment will be dynamically created by the Actions workflow during the first run. Refer to the yml snippet below for environment syntax.
+   - We will define an environment variable at job level for the repository name where we will host the test instance of GitHub pages. Please note that we are defining it within Job scope as the dev-test repo hosting test instance is specific to this job. Refer to the yml snipped below for the environment variable syntax at Job scope.
    - Add the following steps to this job
       - Checkout the repository
       - Install and Build
