@@ -107,7 +107,7 @@ At the end of this exercise we will learn -
    - :warning: `yaml` syntax relies on indentation, please make sure that this is not changed
 
 ## Create a Pull request to add a status badge to ReadMe
-1. In the `Actions` tab, click on the `CI` workflow and you will find a `Create status badge` option. 
+1. In the `Actions` tab, click on the `React App CI` workflow and you will find a `Create status badge` option.  ![image](https://user-images.githubusercontent.com/11780076/112483049-ac4cde00-8d9e-11eb-9959-35a4bb541bac.png)
 2. Click that and `Copy the status badge markdown`
 3. Edit the ReadMe file and paste this markdown on the top of the file. 
 4. Commit the readMe file by choosing to create a new branch and start a pull request. Press `Propose Change` and Open a pull request against `main` as the base branch.
