@@ -1,7 +1,13 @@
 # Workflow 3: Publish package to GitHub Packages
 
-After we have validated the Dev-Test and Production environments, we will want to release our app source as an Npm package for the community to use and build upon.
-In this exercise we will publish the package to GitHub Packages for the community to consume.
+![image](https://user-images.githubusercontent.com/25735209/112420511-556de700-8d53-11eb-90c0-5f0ebea8bcd3.png)
+
+After we have validated the Dev-Test and Production environments, we will want to release our app source as an Npm package for the community to use and build upon. In this exercise we will publish the package to GitHub Packages for the community to consume.
+
+At the end of the exercise we will learn - 
+1. Publish packages to GitHub
+2. Default env variables
+3. Manual triggers (e.g. workflow_dispatch)
 
 ## Publish an npm package to GitHub Packages
 

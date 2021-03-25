@@ -1,14 +1,20 @@
 # Workflow 2: CD - Deploy to Dev-Test and Production environments
 
-In this workflow we will be focusing on creating a CD workflow. 
-Typically, CD deployments are done to production computes hosted in Cloud or in your premise. For our workshop, to simplify the setup complexity, we will be using GitHub Pages hosted in two repos to illustrate the CD concepts. One of the repository will host a Dev-Test instance of the page and the other will host the Production instance of the page.
-In real world, the steps and Actions used for illustration can likely be replaced with steps and Actions targeting any hosting services.
+![image](https://user-images.githubusercontent.com/25735209/112420062-8a2d6e80-8d52-11eb-9e04-1d20e8770d39.png)
+
+In this workflow we will be focusing on creating a CD workflow. Continous deployment involves deploying to any hosted or on-premise production computes automatically. 
+
+We will be using GitHub Pages hosted in two repos to illustrate the CD concepts. 
+1. One of the repo will host a Dev-Test instance of our app.
+2. The second repo will host the Production instance of the app.
+
+These steps and Actions can be replaced with steps and Actions targeting any hosted or on-premise computes.
 
 At the end of the exercise we will learn - 
-1. Using deploy Action from Marketplace
-2. Environment variables at workflow level and at individual jobs level
-3. Environment secrets and approvals
-4. Using environments in the workflow
+1. Using environments in the workflow
+2. Environment secrets and approvals
+3. Using an Action from Marketplace
+4. Environment variables at workflow level and at individual jobs level
 
 ## Deploy to Dev-Test environment
 
