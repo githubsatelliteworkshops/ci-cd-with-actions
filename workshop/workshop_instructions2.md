@@ -137,7 +137,7 @@ Lets go back to our `ci-cd-with-actions` repository to make changes to the CD wo
    
    <img width="655" alt="image" src="https://user-images.githubusercontent.com/11780076/112490809-b6260f80-8da5-11eb-9f66-80b59d97a274.png"> 
    
-   Keep this tab open or copy the generated token to a safe place. This needs to used in the environment secret settingccccccujdc
+   Keep this tab open or copy the generated token to a safe place. This needs to used in the environment secret setting
 </details>  
 
    This is how the environment setting should look - 
