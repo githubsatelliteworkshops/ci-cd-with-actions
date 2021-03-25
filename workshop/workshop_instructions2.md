@@ -10,9 +10,9 @@ At the end of the exercise we will learn -
 3. Environment secrets and approvals
 4. Using environments in the workflow
 
-## Build and deploy to Dev-Test environment
+## Deploy to Dev-Test environment
 
-For Dev-Test environment, we will be building the source and deploying to GitHub Pages in the same repo as our source code i.e. `username/ci-cd-with-actions` repo.
+For Dev-Test environment, we will be using our current reposiotry to deploy to GitHub Pages - `owner/ci-cd-with-actions`
 
 1. Create a new workflow file named `cd.yml` in `.github\workflows` folder. (You can also go to `Actions` tab -> `New workflow` and use `Skip this and set up a workflow yourself`, using which you will get a basic workflow template to fill in)
 2. Add the name of the workflow as "React App CD"
@@ -37,14 +37,14 @@ env:
 ```
 5. Add a new job with id `deploy-dev-test`
    - To run on `ubuntu-latest` 
-   - Add a name for the job as "Deploy to Dev-Test environment"
+   - Name the job as "Deploy to Dev-Test environment"
    - We will be using an environment named `Dev-Test` for this job and we will construct the `url` for this environment. As this environment is not already defined by us in this repository, GitHub Actions will take care of creating it during the first run.
    - We also want to define an environment variable at job level for the repository name where we will publish. As the repo name will vary for various deployment environments, so it will vary for each job.
    - Add the following steps to this job
       - Checkout the repository
-      - Install and Build for node
+      - Install and Build
       - Deploy to GitHub Pages by searching for an Action from Marketplace. 
-         - We will be using JamesIves/github-pages-deploy-action. This action will help in deploying the build folder we specify to a branch we mention.
+         - We will be using `JamesIves/github-pages-deploy-action`. This action will help in deploying the build folder we specify to a branch we mention.
    
    You can use the following yml snippet -
 
@@ -86,19 +86,22 @@ On the repository's home page, on the right hand side you will find an `Environm
   
 ## Deploy to Production environment 
 
-After the dev-test environment has been validated and we are ready for the next stage.
-For production environment, we will create a new public repository for deploying to GitHub Pages, so that we have a separate production url where the app will be hosted.
+After the dev-test environment has been validated, we are ready to deploy to the next stage that is `Production`!
+For production environment, we will create a new public repository to deploy to GitHub Pages, so that we have a separate production url where the app will be hosted.
 
-1. Create a new public repository `actions-workshop-prod` in your user account
+### Create a new repository to used for production
+Create a new public repository `actions-workshop-prod` in your user/organization account to be used for prod deployment.
    - Click on your profile icon on top right corner and open `Your repositories`
    - Press `New` to create a new repository
    - Provide the repo name as `actions-workshop-prod`
    - Ensure to choose `Public`
    - Leave rest options as default and click `Create repository`
 
-2. For production environment, we want to add protection rules by configuraing approvals. Also, as we will be publishing to a separate repository, we will need the access token to deoply to GitHub Pages for that repository. 
-So, for adding an approval protection rule and to store the access token as a secret specific to this environment, we will configure a new Environment named `Production` in `ci-cd-with-actions` repository
+### CD workflow changes
+Lets go back to our `ci-cd-with-actions` repository to make changes to the CD workflow
    - Go to 'Your repositories' from your profile icon and open the `ci-cd-with-actions` repository
+
+1. For production environment, we want to add protection rules by configuraing approvals. Also, as we are publishing to a separate repository, we will need the access token to deoply to GitHub Pages for that repository. So, for adding an approval protection rule and to store the access token as a secret specific to this environment, we will configure a new Environment named `Production` in `ci-cd-with-actions` repository
    - Open `Settings` tab -> open `Environments`
    - Click on `New environment`
    - Give Name as `Production` and press `Configure environment`
@@ -109,7 +112,7 @@ So, for adding an approval protection rule and to store the access token as a se
 
 <details>
         <summary><b>Click here for steps to generate PAT to access your public repositories</b></summary>
-   - Again go click your profile icon on top right
+   - Click your profile icon on top right
    - Go to `Settings`
    - Now click on `Developer Settings` from the options listed on the left side
    - Inside Developer Settings, click on `Personal access tokens`
@@ -123,8 +126,8 @@ So, for adding an approval protection rule and to store the access token as a se
    This is how the environment setting should look - 
    <img width="1004" alt="image" src="https://user-images.githubusercontent.com/25735209/111995209-ad7fd000-8b3e-11eb-9eed-0d1b3d8f76b9.png">
  
-4. Add a job to deploy to the production environment
-   Go to Code and open `.github/workflows/cd.yml` and edit it. Add a job to deploy to staging `deploy-production` 
+2. Add a job to the CD workflow for deploying to the production environment
+   Go to `ci-cd-with-actions` repo -> `Code` tab and open `.github/workflows/cd.yml` and edit it. Add a job to deploy to staging `deploy-production` 
    - Ensure that this job runs only after `deploy-dev-test` have completed using `needs`. 
    - Use the `Production` environment for this job
    - In the steps 
