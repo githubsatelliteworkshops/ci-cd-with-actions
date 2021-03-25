@@ -80,5 +80,8 @@ You can click the package to see the details about the package and how to consum
 
 With this we have automated the software workflows for our app starting from the changes being done by developers to releasing to the consumers after validation. You can modify these workflows and steps for your team according to specific needs and have CI/CD automated using GitHub Actions.
 
-## [Click here for further reference](./further_reference.md)
+### [Click here to view the solution yml for Exercise 3](./solution/publish_package.yml)
+### [Complete workshop solution](./solution)
+
+## [Further references](./further_reference.md)
 
