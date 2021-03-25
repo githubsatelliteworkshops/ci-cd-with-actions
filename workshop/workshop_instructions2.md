@@ -83,17 +83,17 @@ jobs:
 7. After the run has successfully completed, enable `GitHub Pages` settings to see your app deployed on Dev-Test environment.
    - Go to `Settings` in your repository and click on `Pages`
    - Please ensure that you have chosen `gh-pages` branch and `/(root)` folder. Press save. The settings should like below - 
-   ![image](https://user-images.githubusercontent.com/25735209/112477097-a05e1d80-8d98-11eb-9223-cf872c5c58f4.png)
    
-   💡 If you don't find `gh-pages`, please check that the workflow has completed successfully and recheck here post run completion.
+   <img width="400" alt="image" src="https://user-images.githubusercontent.com/25735209/112477097-a05e1d80-8d98-11eb-9223-cf872c5c58f4.png">
+   
+💡 If you don't find `gh-pages`, please check that the workflow has completed successfully and recheck here post run completion.
 
 On the repository's home page, on the right hand side you will find an `Environments` section listing down the environments. 
-
-![image](https://user-images.githubusercontent.com/25735209/112477423-00ed5a80-8d99-11eb-81a6-a2003201eeaf.png)
+ <img width="200" alt="image" src="https://user-images.githubusercontent.com/25735209/112478377-f5e6fa00-8d99-11eb-84b1-73d86df361b7.png">
 
 Click on `Dev-Test` environment and `View deployment` 🎉 You will find that your app has been deployed to the Dev-Test environment -
   
-<img width="206" alt="image" src="https://user-images.githubusercontent.com/25735209/112098841-76ee9780-8bc8-11eb-9c03-ba101e1c476c.png">
+ <img width="206" alt="image" src="https://user-images.githubusercontent.com/25735209/112098841-76ee9780-8bc8-11eb-9c03-ba101e1c476c.png">
 
   
 ## Deploy to Production environment 
