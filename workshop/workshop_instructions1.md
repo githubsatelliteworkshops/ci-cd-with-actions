@@ -15,20 +15,20 @@ At the end of this exercise we will learn -
 5. About Job strategies 
 6. Adding a status badge for a workflow
 
-## Fork actions-workshop repository
+## Fork ci-cd-with-actions repository
 
 1. Log into your GitHub account and fork [ci-cd-with-actions](https://github.com/githubsatelliteworkshops/ci-cd-with-actions). 
 
     - Open the [ci-cd-with-actions](https://github.com/githubsatelliteworkshops/ci-cd-with-actions) in a browser
     - Sign in to your GitHub account from top right if not signed-in already.
-    - Fork this repository into your user account (using `Fork` option on top right of the screen). This repository will get forked as `<username>/actions-workshop`
+    - Fork this repository into your user account (using `Fork` option on top right of the screen). This repository will get forked as `<username>/ci-cd-with-actions`
     
     This repo contains a starter project for react.js for which we will be automating CI and CD flow. It also contains the intsructions for the workshop.
   
 
 ## Add a CI Workflow
 
-1. In the forked `<username>/actions-workshop` repository, go to **Actions** tab and you will see a page to "Get started with GitHub Actions". You will find suggested starter workflows for this repository here.
+1. In the forked `<username>/ci-cd-with-actions` repository, go to **Actions** tab and you will see a page to "Get started with GitHub Actions". You will find suggested starter workflows for this repository here.
 
 2. Choose **Node.js** -> "Set up this workflow"
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/25735209/111957403-f9685000-8b11-11eb-98a3-b3782e813550.png">
