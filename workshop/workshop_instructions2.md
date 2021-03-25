@@ -25,7 +25,7 @@ For Dev-Test environment, we will be using our current reposiotry to deploy to G
 3. Add triggers for the workflow as `Push` on `main` and `releases/*` branches
 4. Next, we will add environment variables at workflow level, related to settings that are common for all instances where we want to deploy, so that these can be used by all the jobs in our workflow. The environement variables we want to define at workflow level are - `owner` and `domain` to construct the urls where our app will be deployed. 
 
-Following is the yaml for the above steps. 💡 Please replace the _username_ in the snippet below. 
+Following is the yaml for the above steps. 💡 Please replace the _owner_ in the snippet below as the user account or organization where the repo is. 
 ```yaml 
 # CD workflow for React app
 
@@ -38,7 +38,7 @@ on:
     - releases/*
 
 env:
-  owner: <username>
+  owner: <owner>
   domain: github.io
 ```
 5. Add a new job with id `deploy-dev-test`
