@@ -1,0 +1,59 @@
+ CD workflow for React app
+
+name: React App CD
+
+on:
+  push:
+    branches:
+    - main
+    - releases/*
+
+env:
+  owner: fill_User_or_Org_name
+  domain: github.io
+
+jobs:
+  deploy-dev-test:
+    name: Deploy to Dev test environment
+    runs-on: ubuntu-latest
+    environment: 
+      name: DevTest
+      url: https://${{ env.owner }}.${{ env.domain }}/${{ env.repo }}//
+    env:
+      repo: ci-cd-with-actions
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2.3.1
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+      - name: Deploy 
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
+
+  deploy-prod:
+    name: Deploy to Production environment
+    needs: [deploy-dev-test]
+    runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: https://${{ env.owner }}.${{ env.domain }}/${{ env.repo }}//
+    env:
+      repo: actions-workshop-prod
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2.3.1
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with: 
+          branch: gh-pages
+          folder: build
+          token: ${{ secrets.TOKEN }}
+          repository-name: ${{ env.owner }}/${{ env.repo }}
