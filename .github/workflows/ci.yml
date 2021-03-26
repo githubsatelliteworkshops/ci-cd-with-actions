@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-test: jigyasabuildtestjob
 
     runs-on: ubuntu-latest
 
