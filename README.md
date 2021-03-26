@@ -6,7 +6,7 @@
   <a href="#books-resources">Resources</a>
 </p>
 
-> This workshop is focused on GitHub Actions helping you automate, customize and execute your software development workflows right within your GitHub repository. In this workshop, we will dive deep into how you can use Actions for your CI/CD pipelines and also touch upon GitHub Packages. We will also be looking at some of the best practices of using Actions within your software automation workflows. 
+> This workshop is focused on GitHub Actions helping you automate, customize and execute your software development workflows right within your GitHub repository. In this worksfhhop, we will dive deep into how you can use Actions for your CI/CD pipelines and also touch upon GitHub Packages. We will also be looking at some of the best practices of using Actions within your software automation workflows. 
 
 ## :mega: Prerequisites
 - A [GitHub.com account](https://github.com/join) with a [verified e-mail address](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/verifying-your-email-address)
