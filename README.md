@@ -1,3 +1,4 @@
+[![React App CD](https://github.com/jigyasapriyadarshini/ci-cd-with-actions/actions/workflows/cdworkflow.yml/badge.svg)](https://github.com/jigyasapriyadarshini/ci-cd-with-actions/actions/workflows/cdworkflow.yml)
 <h1 align="center">CI/CD with GitHub Actions</h1>
 <h5 align="center">@kmkumaran @kaverma</h3>
 
