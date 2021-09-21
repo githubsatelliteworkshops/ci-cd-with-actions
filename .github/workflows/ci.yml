@@ -5,13 +5,17 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+    - main 
+    - releases/*
   pull_request:
-    branches: [ main ]
+    branches: 
+    - main 
+    - releases/*
 
 jobs:
-  build:
-
+  build-test:
+    name: Build and test
     runs-on: ubuntu-latest
 
     strategy:
